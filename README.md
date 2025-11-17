@@ -521,7 +521,7 @@ After updating `aws.tfvars`, deploy or update your main infra cluster:
 
 <img width="267" height="575" alt="infra-workflow" src="https://github.com/user-attachments/assets/85f819fa-e81d-485a-92ea-bef5ea73bb37" />
 
-<img width="954" height="367" alt="image" src="https://github.com/user-attachments/assets/b23eeb19-cc79-4a62-bbd5-7044a3ea3252" />
+<img width="954" height="367" alt="image" src="https://github.com/user-attachments/assets/5e7be81d-0a02-47d9-baca-81c161a3139f" />
 
 - **After the successful completion of the infra job, a file will be automatically created in the terraform/implementations/aws/infra directory (file name: oorucluster-CONTROL-PLANE-NODE-1.yaml).**
 - **Export this kubeconfig file on your local machine to access the MOSIP cluster.**
@@ -530,7 +530,7 @@ After updating `aws.tfvars`, deploy or update your main infra cluster:
 #Note: Ensure that WireGuard is connected.
 ```
 
-<img width="851" height="185" alt="image" src="https://github.com/user-attachments/assets/18d316ab-b04a-4c5d-88dc-e7a487bc615d" />
+<img width="851" height="185" alt="image" src="https://github.com/user-attachments/assets/9789343c-f719-476d-9405-9271bd7f29e7" />
 
 ### 4. Helmsman Deployment
 #### Step 4a: Update DSF Configuration Files
@@ -544,10 +544,10 @@ After updating `aws.tfvars`, deploy or update your main infra cluster:
 
 
 - #### Replace  <sandbox> ---> your cluster domain that you have changed in terraform/implementations/aws/infra/aws.tfvars ie, testrdt
-<img width="824" height="42" alt="image" src="https://github.com/user-attachments/assets/a23e8f5a-2855-4440-a343-d493d1d06117" />
+<img width="824" height="42" alt="image" src="https://github.com/user-attachments/assets/195956bf-35c6-43f8-9147-4ad2f6068e9f" />
 
 - #### Replace  sandbox.xyz.net ---->  your cluster domain that you have changed in terraform/implementations/aws/infra/aws.tfvars ie, testrdt.credissuer.com 
-<img width="835" height="61" alt="image" src="https://github.com/user-attachments/assets/6252aa2b-69df-4783-ab6f-1b791bf90ca1" />
+<img width="835" height="61" alt="image" src="https://github.com/user-attachments/assets/260a3d65-8976-43e8-a8da-b923ea735e04" />
 
 
 3. **Update external-dsf.yaml::**
@@ -625,12 +625,13 @@ After updating `aws.tfvars`, deploy or update your main infra cluster:
 
 - **Update the module boolen value in mosip-dsf.yaml**
 
-<img width="665" height="522" alt="mosip-dsf yaml-module-false" src="https://github.com/user-attachments/assets/3f941841-1d8c-4acc-8368-bedfbd426505" />
+<img width="665" height="522" alt="image" src="https://github.com/user-attachments/assets/cfc6bdd3-4b6f-47b2-a9b3-1377f6d0fac1" />
 
 - **Update the relica count in mosip-dsf.yaml**
 
-<img width="1004" height="542" alt="image" src="https://github.com/user-attachments/assets/cc262d73-a2c8-4420-a49e-a3b2be136cf7" />
-<img width="1004" height="542" alt="image" src="https://github.com/user-attachments/assets/36a5fbfb-6b07-4341-a62e-aa88561548d4" />
+<img width="1004" height="542" alt="image" src="https://github.com/user-attachments/assets/988ef3e7-df0d-46ac-b617-d3b41e21377f" />
+.
+<img width="1004" height="542" alt="image" src="https://github.com/user-attachments/assets/4720f5cc-aed3-4a73-a17d-f0e3952cd381" />
 
 5. **Update testrigs-dsf.yaml (if deploying test environment):**
 -  **Replace  sandbox.xyz.net ---->  your cluster domain that you have changed in terraform/implementations/aws/infra/aws.tfvars ie, testrdt.credissuer.com**
@@ -638,11 +639,11 @@ After updating `aws.tfvars`, deploy or update your main infra cluster:
 
 6. **Update config-server-values.yaml which is present inside the Helmsman/utils/**
 -  There is **v** missing here 1.2.4.3-beta it should be v1.2.4.3-beta
-<img width="1026" height="243" alt="image" src="https://github.com/user-attachments/assets/7803604f-4b1e-48b1-904d-d71c42846119" />
- 
+<img width="1026" height="243" alt="image" src="https://github.com/user-attachments/assets/8659894d-d0f9-44a9-a6a9-3b3b15dc0e25" />
+
 7. **Update global_configmap.yaml which is present inside the Helmsman/utils/**
 -  **Replace  mosip.net ---->  your cluster domain i.e,credissuer.com**
-<img width="1000" height="473" alt="image" src="https://github.com/user-attachments/assets/a4c0ec2e-e0d7-4986-8656-d42b8c8868a1" />
+<img width="1000" height="473" alt="image" src="https://github.com/user-attachments/assets/4a18c520-d8c0-4e1e-962e-7b87d7416873" />
 
 
 #### Step 4b: Configure Repository Secrets for Helmsman
@@ -700,7 +701,8 @@ After updating `aws.tfvars`, deploy or update your main infra cluster:
 - Test repository access from GitHub Actions
 - Verify KUBECONFIG provides cluster access
 
-<img width="706" height="403" alt="env-secrete" src="https://github.com/user-attachments/assets/b189d758-22ce-494b-84c5-1fe338dcf890" />
+<img width="706" height="403" alt="image" src="https://github.com/user-attachments/assets/3460d71f-f582-49ee-a5ac-073c609b5c16" />
+
 
 #### Step 4c: Run Helmsman Deployments via GitHub Actions
 - **(1)** Actions → **"Deploy External services of mosip using Helmsman"** (or "Helmsman External Dependencies")
@@ -716,7 +718,8 @@ After updating `aws.tfvars`, deploy or update your main infra cluster:
   - **Automatic Trigger**: Upon successful completion, this workflow automatically triggers the MOSIP services deployment
 
 
-<img width="1008" height="318" alt="image" src="https://github.com/user-attachments/assets/93418f95-2a12-48cf-98ed-11928f616d04" />
+<img width="1008" height="318" alt="image" src="https://github.com/user-attachments/assets/b3d900ec-b45c-43f4-9d0a-0fcee6f08c5d" />
+
 
 2. **Deploy MOSIP Services (Automated):**
 
@@ -725,7 +728,8 @@ After updating `aws.tfvars`, deploy or update your main infra cluster:
 - DSF file: `mosip-dsf.yaml`
 - Mode: `apply` (required - dry-run will fail due to namespace dependencies)
 
-<img width="1294" height="305" alt="image" src="https://github.com/user-attachments/assets/736f22dc-97ae-489d-911a-9eab14493bd5" />
+<img width="1294" height="305" alt="image" src="https://github.com/user-attachments/assets/ac9a34e3-c38f-431e-afe9-a29db30f6041" />
+
 
 5. **Deploy Test Rigs (Manual):**
 
@@ -786,11 +790,11 @@ cronjob-apitestrig-resident: 0 0 * * 1-5
 kubectl edit cronjob -n dslrig
 ```
 - We have made changes to the schedule, and there are multiple places where updates were applied.”
-<img width="492" height="62" alt="image" src="https://github.com/user-attachments/assets/d93ccfb6-0c34-47e4-88c4-490ea5075c38" />
+<img width="492" height="62" alt="image" src="https://github.com/user-attachments/assets/8ded95af-2440-43c4-a3c0-21f43d4be576" />
 
 
 ```
 30 15 * * 0-4
 ```
 
-<img width="298" height="85" alt="image" src="https://github.com/user-attachments/assets/d0be4279-c645-4ec9-97cd-2fa17555f8ab" />
+<img width="298" height="85" alt="image" src="https://github.com/user-attachments/assets/1123927f-828d-4a50-b4ac-66df153a01ba" />
