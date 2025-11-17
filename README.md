@@ -213,7 +213,7 @@ Add the required secrets as follows:
 - **Environment Secrets** (Settings → Secrets and variables → Actions → Environment secrets):
 - All other secrets mentioned in the Prerequisites section above (KUBECONFIG, WireGuard configs, etc.)
 
-<img width="732" height="267" alt="base-infra-secret" src="https://github.com/user-attachments/assets/46e3b82b-6893-4614-b260-d323ec15dc80" />
+<img width="732" height="267" alt="base-infra-secret" src="https://github.com/user-attachments/assets/aa0c2d2a-db7b-4433-9820-0107499860bb" />
 
 ### 3. Terraform Infrastructure Deployment
 
@@ -300,8 +300,8 @@ enable_wireguard_setup = true
 
 3. **Run base-infra via GitHub Actions:**
 
-<img width="1170" height="106" alt="action-image" src="https://github.com/user-attachments/assets/b87b43d8-fe96-487c-b9b4-238171a321e0" />
-<img width="316" height="581" alt="base-infra-run-workflow" src="https://github.com/user-attachments/assets/001d4bc1-0574-4226-86c5-49f600942617" />
+<img width="1170" height="106" alt="action-image" src="https://github.com/user-attachments/assets/96eb1e64-537a-438b-880e-c17636d77bc9" />
+<img width="316" height="581" alt="base-infra-run-workflow" src="https://github.com/user-attachments/assets/768839ad-2bb1-4419-98e5-525b3cbdfd53" />
 
 - ✅ Green checkmark when complete
 - ✅ Infrastructure created in AWS
@@ -343,7 +343,7 @@ peer9	Nidhi
 - `CLUSTER_WIREGUARD_WG0` - For Helmsman cluster access (peer1)
 - `CLUSTER_WIREGUARD_WG1` - For Helmsman cluster access (peer2, optional)
 
-<img width="706" height="403" alt="env-secrete" src="https://github.com/user-attachments/assets/cc00f915-ad17-4d4e-b97a-f504e9177ca5" />
+<img width="706" height="403" alt="env-secrete" src="https://github.com/user-attachments/assets/5f694ad5-66d1-490a-941c-67dd3ea4865e" />
 
 #### Step 3c: MOSIP Infrastructure
 
@@ -517,8 +517,9 @@ rancher_import_url = "kubectl apply -f https://rancher.example.com/v3/import/TOK
 **Step 3: Deploy/Update Main Infra**
 
 After updating `aws.tfvars`, deploy or update your main infra cluster:
-<img width="1170" height="106" alt="action-image" src="https://github.com/user-attachments/assets/0f0b550c-9ae6-4c3d-8807-41cb01df819a" />
-<img width="267" height="575" alt="infra-workflow" src="https://github.com/user-attachments/assets/5279b19e-65d9-4a3c-af9d-6a7244912a65" />
+<img width="1170" height="106" alt="action-image" src="https://github.com/user-attachments/assets/f966b47e-6f63-4d88-9b89-688fe8adfd20" />
+
+<img width="267" height="575" alt="infra-workflow" src="https://github.com/user-attachments/assets/85f819fa-e81d-485a-92ea-bef5ea73bb37" />
 
 <img width="954" height="367" alt="image" src="https://github.com/user-attachments/assets/b23eeb19-cc79-4a62-bbd5-7044a3ea3252" />
 
